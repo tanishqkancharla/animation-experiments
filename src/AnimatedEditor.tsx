@@ -161,6 +161,14 @@ export function AnimatedEditor() {
 		return selectionRect;
 	}, [editorState.selection]);
 
+	useEffect(() => {
+		animate(
+			".selectionRect",
+			{ opacity: [0, 0.35] },
+			{ duration: 0.27, easing: spring() }
+		);
+	}, [selectionRect]);
+
 	return (
 		<div
 			style={{
@@ -197,7 +205,7 @@ export function AnimatedEditor() {
 				style={{
 					position: "absolute",
 					backgroundColor: "hsl(189 60.3% 60%)",
-					opacity: 0.17,
+					opacity: 0.35,
 					...selectionRect,
 				}}
 				className="selectionRect"
