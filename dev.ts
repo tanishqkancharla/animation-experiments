@@ -1,7 +1,7 @@
 import { build } from "estrella";
 
 build({
-	entry: ["./src/index.tsx"],
+	entry: ["./src/index.tsx", "./src/style.css"],
 	outdir: "dist",
 	sourceRoot: "src",
 	watch: true,
